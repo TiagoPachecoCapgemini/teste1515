@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plants vs. Zombies Minesweeper</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>Plants vs. Zombies Minesweeper</h1>
+            <div class="game-info">
+                <div class="info-item">
+                    <span class="label">Zombies:</span>
+                    <span id="zombieCount" class="value">10</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Flags:</span>
+                    <span id="flagCount" class="value">10</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Time:</span>
+                    <span id="timer" class="value">0</span>
+                </div>
+            </div>
+            <div class="difficulty-selector">
+                <button class="difficulty-btn active" data-difficulty="easy">Easy</button>
+                <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+                <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+            </div>
+            <button id="restartBtn" class="restart-btn">New Game</button>
+        </header>
+        
+        <main class="game-board-container">
+            <div id="gameBoard" class="game-board"></div>
+        </main>
+    </div>
+
+    <div id="gameModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-icon" id="modalIcon"></div>
+            <h2 id="modalTitle">Game Over!</h2>
+            <p id="modalMessage">You hit a zombie!</p>
+            <button id="modalRestartBtn" class="modal-btn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
